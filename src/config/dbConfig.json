@@ -1,0 +1,26 @@
+{
+  "production": {
+    "username": "home_solution_admin",
+    "password": "Pass4db@homesolutions",
+    "database": "home_solution",
+    "host": "localhost",
+    "port": "3306",
+    "dialect": "mysql"
+  },
+  "development": {
+    "username": "homesolution",
+    "password": "Pass4db@homesolutions",
+    "database": "homesolution",
+    "host": "db4free.net",
+    "port": "3306",
+    "dialect": "mysql"
+  },
+  "local": {
+    "username": "homesolution",
+    "password": "Pass4db@homesolutions",
+    "database": "homesolution",
+    "host": "localhost",
+    "port": "3306",
+    "dialect": "mysql"
+  }
+}

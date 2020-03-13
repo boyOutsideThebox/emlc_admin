@@ -1,0 +1,23 @@
+#write the following rule
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ http://127.0.0.1:3000/ [L,R=301,NE]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ http://127.0.0.1:3000/$1 [P,L]
+
+# Deny access to .htaccess
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+<Files ".env">
+Order Allow,Deny
+Deny from all
+Allow from 127.0.0.1
+</Files>
+<FilesMatch "\.(js|json)$">
+Order allow,deny
+Deny from all
+Allow from 127.0.0.1
+</FilesMatch>

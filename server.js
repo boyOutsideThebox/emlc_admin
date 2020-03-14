@@ -1,6 +1,6 @@
 var debug = require('debug')('node-sequelize:server');
 var http = require('http');
-var app = require('./app');
+var app = require('./src/app');
 
 /**
  * Get port from environment and store in Express.
